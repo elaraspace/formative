@@ -64,15 +64,6 @@ export class FormattoRibbonIcons {
                     );
                     return;
                 }
-                if (activeView?.getMode() !== "source") {
-                    new Notice(
-                        getLocale(
-                            LOCALE_CATEGORY.NOTICE_MESSAGES,
-                            "You can only format in editing mode.",
-                        ),
-                    );
-                    return;
-                }
                 if (!editor) {
                     new Notice(
                         getLocale(
