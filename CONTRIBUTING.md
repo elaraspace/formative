@@ -1,4 +1,4 @@
-## Creating a Pull Request
+## Creating a Merge Request
 Please create a merge request for one feature at a time.
 If your merge request is merged into the main branch,
 the feature will be added in the next release.
