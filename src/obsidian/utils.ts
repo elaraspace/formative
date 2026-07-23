@@ -1,21 +1,21 @@
 import { Editor, EditorPosition, Notice, TFile } from "obsidian";
 
 import { getLocale, getWasmLocale, LOCALE_CATEGORY } from "@src/lang/lang.js";
-import FormattoPlugin from "@src/main.js";
+import FormativePlugin from "@src/main.js";
 
-import { format_document } from "../../wasm/pkg/formatto_wasm.js";
+import { format_document } from "../../wasm/pkg/formative_wasm.js";
 import {
     FALLBACK_OPTIONS,
-    FormattoPluginOptions,
+    FormativePluginOptions,
 } from "./options/optionTypes.js";
 
-export class FormattoUtils {
-    private plugin: FormattoPlugin;
+export class FormativeUtils {
+    private plugin: FormativePlugin;
     private cursorPosition: EditorPosition | undefined;
     private originalDocument: string | undefined;
     private formattedDocument: string | undefined;
 
-    constructor(plugin: FormattoPlugin) {
+    constructor(plugin: FormativePlugin) {
         this.plugin = plugin;
     }
 
@@ -135,10 +135,10 @@ export class FormattoUtils {
         }
     }
 
-    private handleEmptyOptions(copiedOptions: FormattoPluginOptions) {
+    private handleEmptyOptions(copiedOptions: FormativePluginOptions) {
         for (const sectionKey of Object.keys(
             copiedOptions,
-        ) as (keyof FormattoPluginOptions)[]) {
+        ) as (keyof FormativePluginOptions)[]) {
             for (const optionKey of Object.keys(
                 copiedOptions[sectionKey] as object,
             ) as (keyof (typeof copiedOptions)[typeof sectionKey])[]) {

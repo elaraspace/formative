@@ -44,7 +44,7 @@ export interface OtherOptions {
     formatOnSave: boolean;
 }
 
-export interface FormattoPluginOptions {
+export interface FormativePluginOptions {
     headingGaps: Partial<HeadingGaps>;
     otherGaps: Partial<OtherGaps>;
     formatOptions: Partial<FormatOptions>;
@@ -82,7 +82,7 @@ export const FALLBACK_OTHER_OPTIONS: Partial<OtherOptions> = {
     formatOnSave: false,
 };
 
-export const FALLBACK_OPTIONS: FormattoPluginOptions = {
+export const FALLBACK_OPTIONS: FormativePluginOptions = {
     headingGaps: FALLBACK_HEADING_GAPS,
     otherGaps: FALLBACK_OTHER_GAPS,
     formatOptions: FALLBACK_FORMAT_OPTIONS,
@@ -110,7 +110,7 @@ export const EMPTY_OTHER_GAPS: Partial<OtherGaps> = {
     beforeCallouts: "",
 };
 
-export const DEFAULT_OPTIONS: FormattoPluginOptions = {
+export const DEFAULT_OPTIONS: FormativePluginOptions = {
     headingGaps: EMPTY_HEADING_GAPS,
     otherGaps: EMPTY_OTHER_GAPS,
     formatOptions: FALLBACK_FORMAT_OPTIONS,

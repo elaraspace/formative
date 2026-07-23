@@ -1,6 +1,6 @@
 {
-    "id": "formatto-format",
-    "name": "Formatto",
+    "id": "formative-format",
+    "name": "Formative",
     "version": "1.3.2",
     "minAppVersion": "1.1.0",
     "description": "Simple, fast, and easy-to-use Markdown formatter.",

@@ -1,31 +1,31 @@
 import { Plugin } from "obsidian";
 
-import { FormattoCommands } from "@obsidian/commands.js";
-import { FormattoIcons } from "@obsidian/icons/icons.js";
-import { FormattoRibbonIcons } from "@obsidian/ribbonIcons.js";
-import { FormattoUtils } from "@obsidian/utils.js";
-import { FormattoEditorMenuEvent } from "@src/obsidian/events/editorMenuEvent.js";
-import { FormattoModifyEvent } from "@src/obsidian/events/modifyEvent.js";
-import { FormattoOptionTab } from "@src/obsidian/options/optionTab.js";
+import { FormativeCommands } from "@obsidian/commands.js";
+import { FormativeIcons } from "@obsidian/icons/icons.js";
+import { FormativeRibbonIcons } from "@obsidian/ribbonIcons.js";
+import { FormativeUtils } from "@obsidian/utils.js";
+import { FormativeEditorMenuEvent } from "@src/obsidian/events/editorMenuEvent.js";
+import { FormativeModifyEvent } from "@src/obsidian/events/modifyEvent.js";
+import { FormativeOptionTab } from "@src/obsidian/options/optionTab.js";
 import { DEFAULT_OPTIONS } from "@src/obsidian/options/optionTypes.js";
 
-import __wbg_init from "../wasm/pkg/formatto_wasm.js";
+import __wbg_init from "../wasm/pkg/formative_wasm.js";
 // @ts-expect-error It needs to be imported directly to use it with Rollup.
-import formatto_wasm from "../wasm/pkg/formatto_wasm_bg.wasm";
+import formative_wasm from "../wasm/pkg/formative_wasm_bg.wasm";
 
-import type { FormattoPluginOptions } from "@src/obsidian/options/optionTypes.ts";
+import type { FormativePluginOptions } from "@src/obsidian/options/optionTypes.ts";
 
 /** Entry Point. */
-export default class FormattoPlugin extends Plugin {
+export default class FormativePlugin extends Plugin {
     // `settings` get injected by the Obsidian client.
-    settings!: FormattoPluginOptions;
+    settings!: FormativePluginOptions;
 
-    utils = new FormattoUtils(this);
-    private icons = new FormattoIcons();
-    private ribbonIcons = new FormattoRibbonIcons(this);
-    private editorMenus = new FormattoEditorMenuEvent(this);
-    private modify = new FormattoModifyEvent(this);
-    private commands = new FormattoCommands(this);
+    utils = new FormativeUtils(this);
+    private icons = new FormativeIcons();
+    private ribbonIcons = new FormativeRibbonIcons(this);
+    private editorMenus = new FormativeEditorMenuEvent(this);
+    private modify = new FormativeModifyEvent(this);
+    private commands = new FormativeCommands(this);
 
     /** Load and Save Options */
     async loadOptions() {
@@ -45,11 +45,10 @@ export default class FormattoPlugin extends Plugin {
 
         // Initialize WebAssembly
         await (async () => {
-            // @ts-expect-error It needs to be imported directly to use it with Rollup.
-            await __wbg_init(await formatto_wasm());
+            await __wbg_init(await formative_wasm());
         })();
 
-        this.addSettingTab(new FormattoOptionTab(this.app, this));
+        this.addSettingTab(new FormativeOptionTab(this.app, this));
 
         this.icons.registerIcons();
         this.ribbonIcons.registerRibbonIcons();

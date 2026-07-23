@@ -1,10 +1,10 @@
 import { getLocale, LOCALE_CATEGORY } from "@src/lang/lang.js";
-import FormattoPlugin from "@src/main.js";
+import FormativePlugin from "@src/main.js";
 
-export class FormattoEditorMenuEvent {
-    private plugin: FormattoPlugin;
+export class FormativeEditorMenuEvent {
+    private plugin: FormativePlugin;
 
-    constructor(plugin: FormattoPlugin) {
+    constructor(plugin: FormativePlugin) {
         this.plugin = plugin;
     }
 
@@ -25,7 +25,7 @@ export class FormattoEditorMenuEvent {
                                 "Format Document",
                             ),
                         )
-                        .setIcon("formatto-logo")
+                        .setIcon("formative-logo")
                         .onClick(() => {
                             this.plugin.utils.formatDocument(editor);
                         }),

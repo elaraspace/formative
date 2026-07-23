@@ -1,14 +1,15 @@
 ## Creating a Pull Request
-Please create a pull request for one feature at a time.
-If your pull request is merged into the main branch,
+Please create a merge request for one feature at a time.
+If your merge request is merged into the main branch,
 the feature will be added in the next release.
 
 
 ## Development Environment
-To build the code, you need Node.js, NPM, Rust, and Cargo in your development 
+To build the code, you need Node.js, PNPM, Rust, and Cargo in your development 
 environment. Please refer to following documents.
 
 - [Node.js](https://nodejs.org/en)
+- [Installation - PNPM](https://pnpm.io/installation)
 - [Install Rust](https://www.rust-lang.org/tools/install)
 - [The Rust Programming Language - Installation](https://doc.rust-lang.org/book/ch01-01-installation.html)
 
@@ -17,7 +18,7 @@ environment. Please refer to following documents.
 You can run these scripts with the following command.
 
 ```bash
-npm run <SCRIPT_NAME>
+pnpm <SCRIPT_NAME>
 ```
 
 | Script     | Description                                              |

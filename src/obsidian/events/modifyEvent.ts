@@ -1,11 +1,11 @@
 import { TFile } from "obsidian";
 
-import FormattoPlugin from "@src/main.js";
+import FormativePlugin from "@src/main.js";
 
-export class FormattoModifyEvent {
-    private plugin: FormattoPlugin;
+export class FormativeModifyEvent {
+    private plugin: FormativePlugin;
 
-    constructor(plugin: FormattoPlugin) {
+    constructor(plugin: FormativePlugin) {
         this.plugin = plugin;
     }
 

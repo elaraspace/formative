@@ -1,9 +1,9 @@
 import { addIcon } from "obsidian";
 
-import formattoLogo from "./img/formatto-logo.svg";
+import formativeLogo from "./img/formative-logo.svg";
 
-export class FormattoIcons {
-    private icons = [{ iconId: "formatto-logo", svg: formattoLogo }];
+export class FormativeIcons {
+    private icons = [{ iconId: "formative-logo", svg: formativeLogo }];
 
     registerIcons = () => {
         this.icons.forEach(({ iconId, svg }) => {

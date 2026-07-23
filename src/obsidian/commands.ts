@@ -2,12 +2,12 @@ import { Command, Notice } from "obsidian";
 
 import { getLocale, LOCALE_CATEGORY } from "@src/lang/lang.js";
 
-import FormattoPlugin from "../main.js";
+import FormativePlugin from "../main.js";
 
-export class FormattoCommands {
-    private plugin: FormattoPlugin;
+export class FormativeCommands {
+    private plugin: FormativePlugin;
 
-    constructor(plugin: FormattoPlugin) {
+    constructor(plugin: FormativePlugin) {
         this.plugin = plugin;
     }
 
@@ -20,20 +20,20 @@ export class FormattoCommands {
     private getCommandsArr(): Command[] {
         return [
             {
-                id: "formatto-logo",
+                id: "formative-logo",
                 name: getLocale(LOCALE_CATEGORY.COMMANDS, "Format Document"),
-                icon: "formatto-logo",
+                icon: "formative-logo",
                 editorCallback: (editor) => {
                     this.plugin.utils.formatDocument(editor);
                 },
             },
             {
-                id: "formatto-folder",
+                id: "formative-folder",
                 name: getLocale(
                     LOCALE_CATEGORY.COMMANDS,
                     "Format Notes in Current Folder",
                 ),
-                icon: "formatto-logo",
+                icon: "formative-logo",
                 callback: async () => {
                     const activeFile =
                         this.plugin.app.workspace.getActiveFile();

@@ -1,9 +1,9 @@
 [package]
-name = "formatto-wasm"
-description = "Wasm bindings for Formatto."
+name = "formative-wasm"
+description = "Wasm bindings for Formative."
 version = "1.3.2"
 authors = ["Stella"]
-repository = "https://github.com/stellacube/formatto"
+repository = "https://github.com/stellacube/formative"
 license = "MIT"
 edition = "2018"
 

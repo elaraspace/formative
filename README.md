@@ -1,13 +1,11 @@
 <img src="./images/icon.png" alt="project-icon" width="64">
 
-# Formatto
-Formatto is a simple Rust-powered Markdown formatter plugin for
-[Obsidian](https://obsidian.md). With user-customizable options, it was
-designed to be simple, fast, and easy to use.
+# Formative
+Formative is a fork of [Formatto](https://github.com/stellacube/formatto). It provides Rust-powered Markdown formatting features on Obsidian. Users can configure the plugin to customize it.
 
 <div>
-    <img alt="use-example" width="49.4%" src="./images/example1.gif">
-    <img alt="options-example" width="49.4%" src="./images/example2.png">
+    <img alt="use-example" width="49.0%" src="./images/example1.gif">
+    <img alt="options-example" width="49.0%" src="./images/example2.png">
 </div>
 
 
@@ -15,7 +13,7 @@ designed to be simple, fast, and easy to use.
 You can use the plugin in following ways:
 
 - Right click in the editor and select "Format Document"
-- Run a command "Formatto: Format Document" (or assign a keyboard shortcut to the command)
+- Run a command "Formative: Format Document" (or assign a keyboard shortcut to the command)
 - Click "Format Document" ribbon action
 
 
@@ -27,4 +25,4 @@ Obsidian uses "live preview" as the default editing mode. But this plugin was de
 
 ## Contributing
 If you're interested in participating in this project, please refer to the
-[contribution guide](https://github.com/stellacube/formatto/blob/main/CONTRIBUTING.md).
+[contribution guide](https://gitlab.com/elaraspace/formative/blob/main/CONTRIBUTING.md).

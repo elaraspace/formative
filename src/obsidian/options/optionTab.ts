@@ -5,10 +5,10 @@ import { getLocale, LOCALE_CATEGORY } from "@src/lang/lang.js";
 import { FALLBACK_OPTIONS } from "./optionTypes.js";
 
 import type { App } from "obsidian";
-import type FormattoPlugin from "@src/main.ts";
+import type FormativePlugin from "@src/main.ts";
 
-export class FormattoOptionTab extends PluginSettingTab {
-    private plugin: FormattoPlugin;
+export class FormativeOptionTab extends PluginSettingTab {
+    private plugin: FormativePlugin;
     private noticeMessages = {
         invalidNumberMessage: getLocale(
             LOCALE_CATEGORY.NOTICE_MESSAGES,
@@ -20,7 +20,7 @@ export class FormattoOptionTab extends PluginSettingTab {
         ),
     };
 
-    constructor(app: App, plugin: FormattoPlugin) {
+    constructor(app: App, plugin: FormativePlugin) {
         super(app, plugin);
         this.plugin = plugin;
     }

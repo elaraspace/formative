@@ -139,7 +139,7 @@ pub fn get_sections(
         }
 
         // Read callouts
-        if is_valid_callout_syntax_line || is_reading_callout {
+        if (is_valid_callout_syntax_line || is_reading_callout) && !is_reading_code_block {
             if is_valid_callout_syntax_line {
                 finish_current_content_section(
                     &mut is_reading_content_section,

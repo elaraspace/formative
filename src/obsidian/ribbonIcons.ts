@@ -1,18 +1,18 @@
 import { MarkdownView, Notice } from "obsidian";
 
 import { getLocale, LOCALE_CATEGORY } from "@src/lang/lang.js";
-import FormattoPlugin from "@src/main.js";
+import FormativePlugin from "@src/main.js";
 
-export class FormattoRibbonIcons {
-    private plugin: FormattoPlugin;
+export class FormativeRibbonIcons {
+    private plugin: FormativePlugin;
 
-    constructor(plugin: FormattoPlugin) {
+    constructor(plugin: FormativePlugin) {
         this.plugin = plugin;
     }
 
     registerRibbonIcons = () => {
         this.plugin.addRibbonIcon(
-            "formatto-logo",
+            "formative-logo",
             getLocale(LOCALE_CATEGORY.RIBBON_ICONS, "Format Document"),
             () => {
                 const editor = this.plugin.app.workspace.activeEditor?.editor;
@@ -43,7 +43,7 @@ export class FormattoRibbonIcons {
         );
 
         this.plugin.addRibbonIcon(
-            "formatto-logo",
+            "formative-logo",
             getLocale(
                 LOCALE_CATEGORY.RIBBON_ICONS,
                 "Format Notes in Current Folder",

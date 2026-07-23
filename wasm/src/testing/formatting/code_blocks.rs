@@ -61,3 +61,50 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry."#;
 
     assert_eq!(output, expected_output);
 }
+
+#[test]
+fn case_23() {
+    setup();
+
+    let input = r#"## Basic Operations
+### Setting a Value
+```
+> SET <KEY>
+OK
+```
+### Getting a Value
+```
+> GET <KEY>
+<KEY>
+```
+### Deleting a Value
+```
+> DEL <KEY>
+```
+"#;
+
+    let sections = get_sections(input, &get_example_preferences()).unwrap();
+    let output = get_formatted_string(sections, &get_example_preferences()).unwrap();
+    let expected_output = r#"## Basic Operations
+
+### Setting a Value
+```
+> SET <KEY>
+OK
+```
+
+
+### Getting a Value
+```
+> GET <KEY>
+<KEY>
+```
+
+
+### Deleting a Value
+```
+> DEL <KEY>
+```"#;
+
+    assert_eq!(output, expected_output);
+}
