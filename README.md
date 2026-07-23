@@ -1,7 +1,5 @@
-<img src="./images/icon.png" alt="project-icon" width="64">
-
 # Formative
-Formative is a fork of [Formatto](https://github.com/stellacube/formatto). It provides Rust-powered Markdown formatting features on Obsidian. Users can configure the plugin to customize it.
+Formative is a fork of [Formatto](https://github.com/stellacube/formatto). It provides Rust-powered Markdown formatting features on [Obsidian](https://obsidian.md/). Users can configure the plugin to customize it.
 
 <div>
     <img alt="use-example" width="49.0%" src="./images/example1.gif">
