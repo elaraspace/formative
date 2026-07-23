@@ -1,7 +1,7 @@
 {
     "name": "formative",
     "type": "module",
-    "version": "1.3.2",
+    "version": "Merge Request",
     "description": "Simple, fast, and easy-to-use Obsidian markdown formatter.",
     "main": "build/index.js",
     "scripts": {
