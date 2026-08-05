@@ -2,8 +2,8 @@
 name = "formative-wasm"
 description = "Wasm bindings for Formative."
 version = "Merge Request"
-authors = ["Stella"]
-repository = "https://github.com/stellacube/formative"
+authors = ["Elara"]
+repository = "https://gitlab.com/elaraspace/formative"
 license = "MIT"
 edition = "2018"
 
