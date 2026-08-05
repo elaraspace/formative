@@ -20,7 +20,7 @@ export class FormativeCommands {
     private getCommandsArr(): Command[] {
         return [
             {
-                id: "formative-logo",
+                id: "formative-format",
                 name: getLocale(LOCALE_CATEGORY.COMMANDS, "Format Document"),
                 icon: "formative-logo",
                 editorCallback: (editor) => {
