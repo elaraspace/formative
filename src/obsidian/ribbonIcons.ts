@@ -50,9 +50,6 @@ export class FormativeRibbonIcons {
             ),
             async () => {
                 const editor = this.plugin.app.workspace.activeEditor?.editor;
-                const activeView =
-                    this.plugin.app.workspace.getActiveViewOfType(MarkdownView);
-
                 const activeFile = this.plugin.app.workspace.getActiveFile();
 
                 if (!activeFile) {
