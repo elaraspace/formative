@@ -10,10 +10,12 @@ import { FormativeOptionTab } from "@src/obsidian/options/optionTab.js";
 import { DEFAULT_OPTIONS } from "@src/obsidian/options/optionTypes.js";
 
 import __wbg_init from "../wasm/pkg/formative_wasm.js";
-// @ts-expect-error It needs to be imported directly to use it with Rollup.
-import formative_wasm from "../wasm/pkg/formative_wasm_bg.wasm";
+// @ts-expect-error Rollup exposes the WASM loader as a default export, unlike wasm-pack's generated declaration.
+import wasmLoader from "../wasm/pkg/formative_wasm_bg.wasm";
 
 import type { FormativePluginOptions } from "@src/obsidian/options/optionTypes.ts";
+
+const loadWasm = wasmLoader as unknown as () => Promise<WebAssembly.Module>;
 
 /** Entry Point. */
 export default class FormativePlugin extends Plugin {
@@ -29,11 +31,11 @@ export default class FormativePlugin extends Plugin {
 
     /** Load and Save Options */
     async loadOptions() {
-        this.settings = Object.assign(
-            {},
-            DEFAULT_OPTIONS,
-            await this.loadData(),
-        );
+        const savedOptions: unknown = await this.loadData();
+        this.settings =
+            typeof savedOptions === "object" && savedOptions !== null
+                ? Object.assign({}, DEFAULT_OPTIONS, savedOptions)
+                : DEFAULT_OPTIONS;
     }
     async saveOptions() {
         await this.saveData(this.settings);
@@ -45,7 +47,7 @@ export default class FormativePlugin extends Plugin {
 
         // Initialize WebAssembly
         await (async () => {
-            await __wbg_init(await formative_wasm());
+            await __wbg_init(await loadWasm());
         })();
 
         this.addSettingTab(new FormativeOptionTab(this.app, this));

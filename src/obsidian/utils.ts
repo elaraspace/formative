@@ -20,7 +20,7 @@ export class FormativeUtils {
     }
 
     formatDocument(editor: Editor) {
-        const copiedOptions = JSON.parse(JSON.stringify(this.plugin.settings));
+        const copiedOptions = this.copyOptions();
         this.handleEmptyOptions(copiedOptions);
 
         this.cursorPosition = editor.getCursor();
@@ -48,7 +48,7 @@ export class FormativeUtils {
     }
 
     formatText(data: string, showErrorNotice = true): string {
-        const copiedOptions = JSON.parse(JSON.stringify(this.plugin.settings));
+        const copiedOptions = this.copyOptions();
         this.handleEmptyOptions(copiedOptions);
 
         this.originalDocument = data;
@@ -140,7 +140,7 @@ export class FormativeUtils {
             copiedOptions,
         ) as (keyof FormativePluginOptions)[]) {
             for (const optionKey of Object.keys(
-                copiedOptions[sectionKey] as object,
+                copiedOptions[sectionKey],
             ) as (keyof (typeof copiedOptions)[typeof sectionKey])[]) {
                 if (copiedOptions[sectionKey][optionKey] === "") {
                     copiedOptions[sectionKey][optionKey] =
@@ -148,6 +148,15 @@ export class FormativeUtils {
                 }
             }
         }
+    }
+
+    private copyOptions(): FormativePluginOptions {
+        return {
+            headingGaps: { ...this.plugin.settings.headingGaps },
+            otherGaps: { ...this.plugin.settings.otherGaps },
+            formatOptions: { ...this.plugin.settings.formatOptions },
+            otherOptions: { ...this.plugin.settings.otherOptions },
+        };
     }
 
     private clearVariables() {

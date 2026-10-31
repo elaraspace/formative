@@ -21,7 +21,7 @@ export class FormativeModifyEvent {
     private getEventsArr() {
         return [
             this.plugin.app.vault.on("modify", (file) => {
-                this.timer = activeWindow.setTimeout(async () => {
+                this.timer = window.setTimeout(async () => {
                     if (
                         this.plugin.settings.otherOptions.formatOnSave &&
                         file instanceof TFile &&
@@ -35,7 +35,7 @@ export class FormativeModifyEvent {
             }),
             this.plugin.app.workspace.on("editor-change", () => {
                 if (!this.timer) return;
-                activeWindow.clearTimeout(this.timer);
+                window.clearTimeout(this.timer);
             }),
         ];
     }
