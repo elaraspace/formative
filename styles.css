@@ -8,3 +8,7 @@
     margin-bottom: 23px;
     color: var(--text-accent);
 }
+
+.formative-settings .setting-item-error {
+    margin-top: 3px;
+}

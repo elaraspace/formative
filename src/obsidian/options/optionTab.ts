@@ -41,6 +41,7 @@ export class FormativeOptionTab extends PluginSettingTab {
     constructor(app: App, plugin: FormativePlugin) {
         super(app, plugin);
         this.plugin = plugin;
+        this.containerEl.addClass("formative-settings");
     }
 
     getSettingDefinitions(): SettingDefinitionItem<FormativeSettingKey>[] {
