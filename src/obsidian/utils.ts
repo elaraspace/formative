@@ -19,7 +19,7 @@ export class FormativeUtils {
         this.plugin = plugin;
     }
 
-    formatDocument(editor: Editor) {
+    formatDocument(editor: Editor): void {
         const copiedOptions = this.copyOptions();
         this.handleEmptyOptions(copiedOptions);
 
@@ -70,7 +70,7 @@ export class FormativeUtils {
         }
     }
 
-    async formatFolderFiles(folderPath: string) {
+    async formatFolderFiles(folderPath: string): Promise<void> {
         const filesInFolder = this.getMarkdownFilesInFolder(folderPath);
         let changedCount = 0;
         let failedCount = 0;
@@ -114,7 +114,7 @@ export class FormativeUtils {
         );
     }
 
-    private displayMessage() {
+    private displayMessage(): void {
         if (
             this.plugin.settings.otherOptions.notifyWhenUnchanged &&
             this.formattedDocument === this.originalDocument
@@ -135,7 +135,7 @@ export class FormativeUtils {
         }
     }
 
-    private handleEmptyOptions(copiedOptions: FormativePluginOptions) {
+    private handleEmptyOptions(copiedOptions: FormativePluginOptions): void {
         for (const sectionKey of Object.keys(
             copiedOptions,
         ) as (keyof FormativePluginOptions)[]) {
@@ -159,7 +159,7 @@ export class FormativeUtils {
         };
     }
 
-    private clearVariables() {
+    private clearVariables(): void {
         this.cursorPosition = undefined;
         this.originalDocument = undefined;
         this.formattedDocument = undefined;

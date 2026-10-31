@@ -11,7 +11,7 @@ export class FormativeCommands {
         this.plugin = plugin;
     }
 
-    registerCommands() {
+    registerCommands(): void {
         this.getCommandsArr().forEach((item) => {
             this.plugin.addCommand(item);
         });

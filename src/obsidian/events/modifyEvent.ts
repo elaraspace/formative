@@ -1,4 +1,4 @@
-import { TFile } from "obsidian";
+import { EventRef, TFile } from "obsidian";
 
 import FormativePlugin from "@src/main.js";
 
@@ -12,13 +12,13 @@ export class FormativeModifyEvent {
     private timer: number | null = null;
     private timerDelay = 1000;
 
-    registerEvents() {
+    registerEvents(): void {
         this.getEventsArr().forEach((item) => {
             this.plugin.registerEvent(item);
         });
     }
 
-    private getEventsArr() {
+    private getEventsArr(): EventRef[] {
         return [
             this.plugin.app.vault.on("modify", (file) => {
                 this.timer = window.setTimeout(async () => {

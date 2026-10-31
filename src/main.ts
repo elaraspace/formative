@@ -30,19 +30,19 @@ export default class FormativePlugin extends Plugin {
     private commands = new FormativeCommands(this);
 
     /** Load and Save Options */
-    async loadOptions() {
+    async loadOptions(): Promise<void> {
         const savedOptions: unknown = await this.loadData();
         this.settings =
             typeof savedOptions === "object" && savedOptions !== null
                 ? Object.assign({}, DEFAULT_OPTIONS, savedOptions)
                 : DEFAULT_OPTIONS;
     }
-    async saveOptions() {
+    async saveOptions(): Promise<void> {
         await this.saveData(this.settings);
     }
 
     /** Runs whenever the user starts using the plugin in Obsidian. */
-    async onload() {
+    async onload(): Promise<void> {
         await this.loadOptions();
 
         // Initialize WebAssembly
@@ -60,5 +60,5 @@ export default class FormativePlugin extends Plugin {
     }
 
     /** Runs when the plugin is disabled. */
-    onunload() {}
+    onunload(): void {}
 }

@@ -1,6 +1,8 @@
 import { getLocale, LOCALE_CATEGORY } from "@src/lang/lang.js";
 import FormativePlugin from "@src/main.js";
 
+import type { EventRef } from "obsidian";
+
 export class FormativeEditorMenuEvent {
     private plugin: FormativePlugin;
 
@@ -8,13 +10,13 @@ export class FormativeEditorMenuEvent {
         this.plugin = plugin;
     }
 
-    registerEvents() {
+    registerEvents(): void {
         this.getEventsArr().forEach((item) => {
             this.plugin.registerEvent(item);
         });
     }
 
-    private getEventsArr() {
+    private getEventsArr(): EventRef[] {
         return [
             this.plugin.app.workspace.on("editor-menu", (menu, editor) => {
                 menu.addItem((item) =>
