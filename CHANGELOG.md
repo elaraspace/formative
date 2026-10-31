@@ -1,4 +1,4 @@
-## 1.3.6 - 2026-10-31
+## 1.3.6
 **Release Date:** 2026-10-31
 **Full Changelog:** https://gitlab.com/elaraspace/formative/-/compare/1.3.5...1.3.6
 
