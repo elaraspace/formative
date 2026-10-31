@@ -116,3 +116,20 @@ export const DEFAULT_OPTIONS: FormativePluginOptions = {
     formatOptions: FALLBACK_FORMAT_OPTIONS,
     otherOptions: FALLBACK_OTHER_OPTIONS,
 };
+
+export type FormativeSettingKey =
+    | "headingGaps.beforeTopLevelHeadings"
+    | "headingGaps.beforeFirstSubHeading"
+    | "headingGaps.beforeSubHeadings"
+    | "otherGaps.afterProperties"
+    | "otherGaps.beforeContents"
+    | "otherGaps.beforeContentsAfterHeadings"
+    | "otherGaps.beforeContentsAfterCodeBlocks"
+    | "otherGaps.beforeCodeBlocks"
+    | "otherGaps.beforeCodeBlocksAfterHeadings"
+    | "otherGaps.beforeCalloutsAfterHeadings"
+    | "otherGaps.beforeCallouts"
+    | "formatOptions.insertNewline"
+    | "otherOptions.notifyWhenUnchanged"
+    | "otherOptions.showMoreDetailedErrorMessages"
+    | "otherOptions.formatOnSave";

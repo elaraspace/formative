@@ -2,28 +2,11 @@ import { debounce, Notice, PluginSettingTab, Setting } from "obsidian";
 
 import { getLocale, LOCALE_CATEGORY } from "@src/lang/lang.js";
 
-import { FALLBACK_OPTIONS } from "./optionTypes.js";
+import { FALLBACK_OPTIONS, FormativeSettingKey } from "./optionTypes.js";
 
 import type { App, SettingDefinition, SettingDefinitionItem } from "obsidian";
 
 import type FormativePlugin from "@src/main.ts";
-
-type FormativeSettingKey =
-    | "headingGaps.beforeTopLevelHeadings"
-    | "headingGaps.beforeFirstSubHeading"
-    | "headingGaps.beforeSubHeadings"
-    | "otherGaps.afterProperties"
-    | "otherGaps.beforeContents"
-    | "otherGaps.beforeContentsAfterHeadings"
-    | "otherGaps.beforeContentsAfterCodeBlocks"
-    | "otherGaps.beforeCodeBlocks"
-    | "otherGaps.beforeCodeBlocksAfterHeadings"
-    | "otherGaps.beforeCalloutsAfterHeadings"
-    | "otherGaps.beforeCallouts"
-    | "formatOptions.insertNewline"
-    | "otherOptions.notifyWhenUnchanged"
-    | "otherOptions.showMoreDetailedErrorMessages"
-    | "otherOptions.formatOnSave";
 
 export class FormativeOptionTab extends PluginSettingTab {
     private plugin: FormativePlugin;
