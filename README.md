@@ -1,5 +1,6 @@
 # Formative
 
+- [Download Plugin](https://community.obsidian.md/plugins/formative-format)
 - [Official GitLab Repository](https://gitlab.com/elaraspace/formative)
 - [GitHub Mirror](https://github.com/elaraspace/formative)
 
