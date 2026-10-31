@@ -1,20 +1,20 @@
 ## 1.3.7
-**Release Date:** 2026-10-31
-**Full Changelog:** https://gitlab.com/elaraspace/formative/-/compare/1.3.6...1.3.7
+> - **Release Date:** 2026-10-31
+> - **Full Changelog:** https://gitlab.com/elaraspace/formative/-/compare/1.3.6...1.3.7
 
 - Updated the logo icon file.
 
 
 ## 1.3.6
-**Release Date:** 2026-10-31
-**Full Changelog:** https://gitlab.com/elaraspace/formative/-/compare/1.3.5...1.3.6
+> - **Release Date:** 2026-10-31
+> - **Full Changelog:** https://gitlab.com/elaraspace/formative/-/compare/1.3.5...1.3.6
 
 - Improved warning message spacing on the settings screen.
 
 
 ## 1.3.5
-**Release Date:** 2026-10-31
-**Full Changelog:** https://gitlab.com/elaraspace/formative/-/compare/1.3.4...1.3.5
+> - **Release Date:** 2026-10-31
+>- **Full Changelog:** https://gitlab.com/elaraspace/formative/-/compare/1.3.4...1.3.5
 
 - Addressed feedback from the Obsidian plugin review process:
   - Enabled repository issues.
