@@ -1,6 +1,6 @@
 # Formative
 
-- [Official Repository](https://gitlab.com/elaraspace/formative)
+- [Official GitLab Repository](https://gitlab.com/elaraspace/formative)
 - [GitHub Mirror](https://github.com/elaraspace/formative)
 - [Releases](https://github.com/elaraspace/formative/releases)
 
