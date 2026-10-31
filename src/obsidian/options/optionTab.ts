@@ -176,8 +176,8 @@ export class FormativeOptionTab extends PluginSettingTab {
         ];
     }
 
-    getControlValue(key: string): unknown {
-        switch (key as FormativeSettingKey) {
+    getControlValue(key: FormativeSettingKey): unknown {
+        switch (key) {
             case "headingGaps.beforeTopLevelHeadings":
                 return this.plugin.settings.headingGaps.beforeTopLevelHeadings;
             case "headingGaps.beforeFirstSubHeading":
@@ -218,8 +218,11 @@ export class FormativeOptionTab extends PluginSettingTab {
         }
     }
 
-    async setControlValue(key: string, value: unknown): Promise<void> {
-        switch (key as FormativeSettingKey) {
+    async setControlValue(
+        key: FormativeSettingKey,
+        value: unknown,
+    ): Promise<void> {
+        switch (key) {
             case "headingGaps.beforeTopLevelHeadings":
                 if (typeof value === "string") {
                     this.plugin.settings.headingGaps.beforeTopLevelHeadings =

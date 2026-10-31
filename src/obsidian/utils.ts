@@ -77,8 +77,9 @@ export class FormativeUtils {
 
         for (const file of filesInFolder) {
             try {
-                const originalText =
-                    await this.plugin.app.vault.cachedRead(file);
+                const originalText = await this.plugin.app.vault.cachedRead(
+                    file,
+                );
                 const formattedText = this.formatText(originalText, false);
 
                 if (formattedText !== originalText) {
@@ -110,7 +111,7 @@ export class FormativeUtils {
 
         const folderPrefix = `${folderPath}/`;
         return markdownFiles.filter((file) =>
-            file.path.startsWith(folderPrefix),
+            file.path.startsWith(folderPrefix)
         );
     }
 
@@ -136,12 +137,16 @@ export class FormativeUtils {
     }
 
     private handleEmptyOptions(copiedOptions: FormativePluginOptions): void {
-        for (const sectionKey of Object.keys(
-            copiedOptions,
-        ) as (keyof FormativePluginOptions)[]) {
-            for (const optionKey of Object.keys(
-                copiedOptions[sectionKey],
-            ) as (keyof (typeof copiedOptions)[typeof sectionKey])[]) {
+        for (
+            const sectionKey of Object.keys(
+                copiedOptions,
+            ) as (keyof FormativePluginOptions)[]
+        ) {
+            for (
+                const optionKey of Object.keys(
+                    copiedOptions[sectionKey],
+                ) as (keyof (typeof copiedOptions)[typeof sectionKey])[]
+            ) {
                 if (copiedOptions[sectionKey][optionKey] === "") {
                     copiedOptions[sectionKey][optionKey] =
                         FALLBACK_OPTIONS[sectionKey][optionKey];

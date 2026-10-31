@@ -16,8 +16,8 @@ export class FormativeRibbonIcons {
             getLocale(LOCALE_CATEGORY.RIBBON_ICONS, "Format Document"),
             () => {
                 const editor = this.plugin.app.workspace.activeEditor?.editor;
-                const activeView =
-                    this.plugin.app.workspace.getActiveViewOfType(MarkdownView);
+                const activeView = this.plugin.app.workspace
+                    .getActiveViewOfType(MarkdownView);
 
                 if (!editor) {
                     new Notice(

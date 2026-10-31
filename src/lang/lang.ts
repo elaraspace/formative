@@ -33,27 +33,32 @@ const locales: { en: typeof en; [key: string]: typeof en } = {
 /** @example getLocale(LOCALE_CATEGORY.COMMANDS, "Format Document") */
 export const getLocale = (category: LocaleCategory, key: string): string => {
     const usingLocale = locales[detectedLanguage] ?? locales.en;
+
     return (
         (usingLocale[category] as Record<string, string>)[key] ||
         (locales.en[category] as Record<string, string>)[key] ||
-        "INVALID_VALUE"
+        "INVALID_VALUE (UNREACHABLE)"
     );
 };
 
 /** Returns the "wasm" object in the locale file. */
 export const getWasmLocale = () => {
     const usingLocale = locales[detectedLanguage] ?? locales.en;
-    
-    return Object.fromEntries(
-        Object.entries(locales.en.wasm).map(([category, messages]) => [
-            category,
-            Object.fromEntries(
-                Object.entries(messages).map(([key, message]) => [
-                    key,
-                    (usingLocale.wasm[category as keyof typeof en.wasm] as
-                        Record<string, string>)[key] || message,
-                ]),
-            ),
-        ]),
-    ) as typeof en.wasm;
+    const wasmLocale: Record<string, Record<string, string>> = {};
+
+    for (const [category, messages] of Object.entries(locales.en.wasm)) {
+        const localizedMessages = usingLocale.wasm[
+            category as keyof (typeof en.wasm)
+        ] as Record<string, string>;
+
+        const categoryMessages: Record<string, string> = {};
+
+        for (const [key, message] of Object.entries(messages)) {
+            categoryMessages[key] = localizedMessages[key] || message;
+        }
+
+        wasmLocale[category] = categoryMessages;
+    }
+
+    return wasmLocale as typeof en.wasm;
 };

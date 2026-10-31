@@ -17,7 +17,7 @@ module.exports = {
     },
     plugins: ["@typescript-eslint"],
     rules: {
-        quotes: ["warn", "double"],
+        quotes: "off",
         semi: ["error", "always"],
 
         // Unused vars

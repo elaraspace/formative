@@ -30,7 +30,7 @@ export class FormativeEditorMenuEvent {
                         .setIcon("formative-logo")
                         .onClick(() => {
                             this.plugin.utils.formatDocument(editor);
-                        }),
+                        })
                 );
             }),
         ];

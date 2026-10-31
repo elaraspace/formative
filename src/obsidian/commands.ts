@@ -35,8 +35,8 @@ export class FormativeCommands {
                 ),
                 icon: "formative-logo",
                 callback: async () => {
-                    const activeFile =
-                        this.plugin.app.workspace.getActiveFile();
+                    const activeFile = this.plugin.app.workspace
+                        .getActiveFile();
                     if (!activeFile) {
                         new Notice(
                             getLocale(

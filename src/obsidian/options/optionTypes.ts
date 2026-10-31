@@ -1,5 +1,5 @@
 /*
-  Type Declarations
+    Type Declarations
 */
 
 export interface HeadingGaps {
@@ -52,7 +52,7 @@ export interface FormativePluginOptions {
 }
 
 /*
-  Fallback Option Values
+    Fallback Option Values
 */
 
 export const FALLBACK_HEADING_GAPS: Partial<HeadingGaps> = {
@@ -90,7 +90,7 @@ export const FALLBACK_OPTIONS: FormativePluginOptions = {
 };
 
 /*
-  Default Option Values
+    Default Option Values
 */
 
 export const EMPTY_HEADING_GAPS: Partial<HeadingGaps> = {
