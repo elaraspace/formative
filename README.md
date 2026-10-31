@@ -2,7 +2,6 @@
 
 - [Official GitLab Repository](https://gitlab.com/elaraspace/formative)
 - [GitHub Mirror](https://github.com/elaraspace/formative)
-- [Releases](https://github.com/elaraspace/formative/releases)
 
 Formative is a fork of [Formatto](https://github.com/stellacube/formatto). It provides Rust-powered Markdown formatting features on [Obsidian](https://obsidian.md/). Users can configure the plugin to customize it.
 
