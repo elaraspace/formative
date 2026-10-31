@@ -1,6 +1,10 @@
-<svg class="formative__custom-icons" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-    <rect x="2" y="2" width="6.65444" height="3.02" rx="0.5" />
-    <rect x="2" y="6.31047" width="12.0693" height="3.44838" rx="0.5" />
-    <rect x="10.621" y="2" width="3.44838" height="6.03466" rx="0.5" />
-    <rect x="2.03467" y="11" width="6.98996" height="3.01966" rx="0.5" />
+<svg class="formative__custom-icons" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(5 0) scale(0.2967359)" fill="currentColor" stroke="none">
+        <path
+            d="M54.0481 0C83.8781 0 108.096 24.2178 108.096 54.0479V282.569C108.096 312.399 83.8781 336.617 54.0481 336.617C24.2182 336.617 0 312.399 0 282.569V54.0479C0 24.2178 24.2182 0 54.0481 0Z"
+            fill-rule="evenodd" clip-rule="evenodd" />
+        <path
+            d="M249.322 0C279.152 0 303.37 24.2183 303.37 54.0481V151.558C303.37 181.388 279.152 205.606 249.322 205.606C219.492 205.606 195.274 181.388 195.274 151.558V54.0481C195.274 24.2183 219.492 0 249.322 0Z"
+            fill-rule="evenodd" clip-rule="evenodd" />
+    </g>
 </svg>
