@@ -4,7 +4,7 @@
 - [Official GitLab Repository](https://gitlab.com/elaraspace/formative)
 - [GitHub Mirror](https://github.com/elaraspace/formative)
 
-Formative is a fork of Formatto. It provides Rust-powered Markdown formatting features on [Obsidian](https://obsidian.md/). Users can configure the plugin to customize it.
+Formative is a fork of [Formatto](https://github.com/stellacube/formatto). It provides Rust-powered Markdown formatting features on [Obsidian](https://obsidian.md/). Users can configure the plugin to customize it.
 
 <div>
     <img alt="use-example" width="49.0%" src="./images/example1.gif">
